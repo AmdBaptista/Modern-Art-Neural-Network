@@ -3,10 +3,19 @@ package me.amdbaptista.game;
 import java.util.ArrayList;
 import java.util.List;
 
+// TODO: Implement startGame() method  
+
+/*
+ * Represents a game of Modern Art
+ */
 public class ModernArtGame {
     private List<Player> players;
     private Deck deck;
 
+    /*
+     * Constructor for ModernArtGame
+     * @param num_players Number of players in the game
+     */
     public ModernArtGame(int num_players) {
         this.players = new ArrayList<>();
         for (int i = 0; i < num_players; i++) {
@@ -15,6 +24,10 @@ public class ModernArtGame {
         this.deck = new Deck();
     }
 
+    /*
+     * Constructor for ModernArtGame
+     * @param players List of players in the game
+     */
     public ModernArtGame(List<Player> players) {
         this.players = players;
         this.deck = new Deck();
