@@ -2,5 +2,6 @@
     "java.compile.nullAnalysis.mode": "disabled",
     "cSpell.words": [
         "amdbaptista"
-    ]
+    ],
+    "java.configuration.updateBuildConfiguration": "interactive"
 }

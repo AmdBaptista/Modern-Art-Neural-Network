@@ -47,4 +47,8 @@ public class Card {
     public void setBoughtValue(int boughtValue) {
         this.boughtValue = boughtValue;
     }
+
+    public String toString() {
+        return color.name() + " " + type.name();
+    }
 }

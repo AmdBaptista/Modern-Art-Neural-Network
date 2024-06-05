@@ -45,4 +45,8 @@ public class Player {
     public void setBoughtCards(List<Card> boughtCards) {
         this.boughtCards = boughtCards;
     }
+
+    public String toString() {
+        return "Gold: " + gold + " ,Hand: " + hand.size() + " ,Bought Cards: " + boughtCards.size();
+    }
 }

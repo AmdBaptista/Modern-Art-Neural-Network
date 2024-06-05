@@ -75,5 +75,13 @@ public class ModernArtGame {
     
         return cardsPerRound[numPlayers][round - 1];
     }
+
+    public List<Player> getPlayers() {
+        return players;
+    }
+
+    public Deck getDeck() {
+        return deck;
+    }
     
 }
