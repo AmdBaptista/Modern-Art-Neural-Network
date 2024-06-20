@@ -16,6 +16,12 @@ public class Player {
         this.boughtCards = new ArrayList<>();
     }
 
+    public Player(int startingGold) {
+        this.gold = startingGold;
+        this.hand = new ArrayList<>();
+        this.boughtCards = new ArrayList<>();
+    }
+
     // Method to add cards to the player's hand
     public void addCardsToHand(List<Card> cards) {
         hand.addAll(cards);

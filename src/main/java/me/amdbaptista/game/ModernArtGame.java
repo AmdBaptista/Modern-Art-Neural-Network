@@ -11,6 +11,7 @@ import java.util.List;
 public class ModernArtGame {
     private List<Player> players;
     private Deck deck;
+    private int startingGold;
 
     /*
      * Constructor for ModernArtGame
@@ -20,6 +21,14 @@ public class ModernArtGame {
         this.players = new ArrayList<>();
         for (int i = 0; i < num_players; i++) {
             this.players.add(new Player());
+        }
+        this.deck = new Deck();
+    }
+
+    public ModernArtGame(int num_players, int startingGold) {
+        this.players = new ArrayList<>();
+        for (int i = 0; i < num_players; i++) {
+            this.players.add(new Player(startingGold));
         }
         this.deck = new Deck();
     }

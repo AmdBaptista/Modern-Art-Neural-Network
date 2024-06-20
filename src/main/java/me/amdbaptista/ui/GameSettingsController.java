@@ -13,6 +13,7 @@ import javafx.scene.control.Spinner;
 import javafx.scene.control.SpinnerValueFactory;
 import javafx.scene.control.TextField;
 import javafx.stage.Stage;
+import me.amdbaptista.game.ModernArtGame;
 import javafx.scene.Node;
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
@@ -36,6 +37,8 @@ public class GameSettingsController {
     private Label alteredDeckLabel;
 
     private String gameType; // Assuming this is set somewhere else
+
+    private ModernArtGame game;
 
     public void initialize() {
         // Initialize spinner with default value and constraints
@@ -79,10 +82,15 @@ public class GameSettingsController {
 
         // Do something with the settings, like save them
         System.out.println("Player Count: " + playerCount);
-        if ("god".equals(gameType)) {
-            System.out.println("Starting Gold: " + startingGold);
-            System.out.println("Altered Deck: " + alteredDeck);
+        System.out.println("Starting Gold: " + startingGold);
+        System.out.println("Altered Deck: " + alteredDeck);
+
+        if ("normal".equals(gameType)) {
+            game = new ModernArtGame(playerCount);
+        } else if ("god".equals(gameType)) {
+            game = new ModernArtGame(playerCount, Integer.parseInt(startingGold));
         }
+        game.startGame();
     }
 
     @FXML
