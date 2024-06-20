@@ -13,10 +13,13 @@
         <Label text="Game Settings" style="-fx-font-size: 20px;" />
         <Label text="Amount of players:" />
         <Spinner fx:id="playerCountSpinner" />
-        <Label text="Amount of starting gold:" />
+        <Label text="Amount of starting gold:" fx:id="startingGoldLabel" />
         <TextField fx:id="startingGoldField" />
-        <Label text="Altered Deck:" />
+        <Label text="Altered Deck:" fx:id="alteredDeckLabel" />
         <CheckBox fx:id="alteredDeckCheckBox" text="Yes" />
-        <Button fx:id="startFirstRoundButton" text="Start First Round" />
+        <Button text="Save Settings" onAction="#saveSettings" />
+        <Button text="Back" onAction="#goBack" />
     </children>
 </VBox>
+
+

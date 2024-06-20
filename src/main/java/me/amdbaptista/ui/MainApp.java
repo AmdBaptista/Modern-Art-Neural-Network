@@ -10,17 +10,16 @@ public class MainApp extends Application {
 
     @Override
     public void start(Stage primaryStage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/MainMenu.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/ui/StartMenu.fxml"));
         Parent root = loader.load();
-        
-        // Set fixed width and height
-        primaryStage.setMinWidth(600);
-        primaryStage.setMinHeight(400);
-        primaryStage.setMaxWidth(600);
-        primaryStage.setMaxHeight(400);
 
         primaryStage.setTitle("Modern Art");
         primaryStage.setScene(new Scene(root, 600, 400));
+
+        primaryStage.setWidth(600);
+        primaryStage.setHeight(400);
+        primaryStage.setResizable(false);
+        
         primaryStage.show();
     }
 

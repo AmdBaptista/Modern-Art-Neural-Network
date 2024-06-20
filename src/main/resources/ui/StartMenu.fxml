@@ -8,6 +8,7 @@
 <VBox alignment="CENTER" spacing="20.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="me.amdbaptista.ui.GameController">
     <children>
         <Label text="Modern Art" style="-fx-font-size: 24px;" />
-        <Button fx:id="startNormalGameButton" text="Start Game" />
+        <Button fx:id="startNormalGameButton" text="Start Normal Game" onAction="#handleStartNormalGame"/>
+        <Button fx:id="startGodGameButton" text="Start All Info Game" onAction="#handleStartGodGame"/>
     </children>
 </VBox>
